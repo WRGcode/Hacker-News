@@ -1,5 +1,11 @@
 import React, { useState } from 'react'
 import Items from '../components/Items'
+import { context } from '../util/content'
+
+// const News = () => {
+//     hits.map()
+// }
+
 
 const Home = () => {
     return (
@@ -10,11 +16,11 @@ const Home = () => {
             </form>
 
             <div>
-                <button>{'<='}</button>
-                <p>"page number of max page"</p>
-                <button>{'=>'}</button>
+                <button>{'🢀'}</button>
+                <p>{}"min" of {}"max"</p>
+                <button>{'🢂'}</button>
             </div>
-            <section>
+            <section className='stories'>
                 <Items />
             </section>
 
