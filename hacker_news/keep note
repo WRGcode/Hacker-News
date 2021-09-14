@@ -1,0 +1,5 @@
+~~~~~~~~~~~~Styles~~~~~~~~~~~~~
+form-input
+
+~~~~~~~~~~~functionality~~~~~~~~~~~~
+<input type='text' className="form-input" value={query} onChange={(e) => setQuery(e.target.value)}></input>
