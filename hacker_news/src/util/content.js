@@ -1,6 +1,5 @@
 import React, { useEffect, useReducer, useContext } from 'react';
 import { reducer } from './reducer'
-
 const API_ENDPOINT = `http://hn.algolia.com/api/v1/search?`;
 
 //state object that holds the values for the context
@@ -9,7 +8,7 @@ const initialState = {
     hits: [],
     page: 0,
     query: 'React',
-    nbpages: 0,
+    nbPages: 0,
     loading: true,
 }
 
@@ -30,6 +29,14 @@ dispatch({type: "SET_HITS", payload: data})
     }
 }
 
+const handleSearch = (query) => {
+    dispatch({type: "HANDLE_SEARCH", payload: query});
+};
+
+const handlePage = (value) =>{
+    dispatch({type: 'HANDLE_PAGE', payload: value})
+}
+
 const removeStory =(id) =>{
     dispatch({type: "REMOVE_STORY", payload: id})
 }
@@ -40,7 +47,7 @@ useEffect(() => {
 
 
 
-return <AppContext.Provider value={{...state, removeStory}}>
+return <AppContext.Provider value={{...state, removeStory, handleSearch, handlePage}}>
     {children}
 </AppContext.Provider>
 }

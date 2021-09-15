@@ -267,3 +267,76 @@ container {
   text-transform: none;
   margin-bottom: 3rem;
 }
+
+.news {
+  margin-left: 9%;
+}
+.news .news-title {
+  color: black;
+  font-size: 3rem;
+}
+.news .form-input {
+  width: 90vw;
+  max-width: 60%;
+  margin: 0 auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color: #268e97;
+}
+.news .arrow-btn {
+  color: black;
+  font-size: 2rem;
+  border: transparent;
+}
+.news p {
+  color: black;
+  font-size: 2rem;
+}
+
+.stories {
+  color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.isloading .spinner {
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid #b1e7ec;
+  border-radius: 50%;
+  border-top-color: #ce3b85;
+  animation: spinner 0.8s infinite ease;
+}
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.story {
+  border-radius: 0.25rem;
+  border: #222 solid;
+  margin: 2%;
+  color: black;
+}
+.story .article-title {
+  padding-left: 5%;
+  color: black;
+}
+.story .info {
+  color: black;
+}
+.story .read-link {
+  color: black;
+}
+.story .remove-btn {
+  color: black;
+}

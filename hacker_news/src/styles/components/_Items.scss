@@ -1,0 +1,50 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+.isloading{
+
+
+    .spinner {
+    
+        @include box(100px);
+        @include center-auto;
+        border: 5px solid $primary-8;
+        border-radius: 50%;
+        border-top-color: $secondary-4;
+        animation: spinner .8s infinite ease;
+    
+        @keyframes spinner {
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+
+.story{
+    border-radius: $radius;
+    border: $black solid ;
+    margin: 2%;
+        color: black;
+
+
+    .article-title{
+        padding-left: 5%;
+        color: black;
+        
+
+    }
+    .info{
+        color: black;
+
+    }
+    .read-link{
+        color: black;
+
+    }
+    .remove-btn{
+        color: black;
+
+    }
+}

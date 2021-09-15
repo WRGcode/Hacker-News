@@ -1,0 +1,46 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+.news{
+margin-left: 9%;
+    .news-title{
+        color: black;
+        font-size: 3rem;
+
+    }
+    .form-input{
+        width: 90vw;
+        max-width: 60%;
+        margin: 0 auto;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        font-size: 2rem;
+        text-transform: uppercase;
+        background: transparent;
+        border: {
+            top: none ;
+            left: none ;
+            right: none ;
+            color: $primary-2;
+        };
+    }
+    .arrow-btn{
+        color: black;
+        font-size: 2rem;
+        border: transparent;
+        
+    }
+    p{
+        color: black;
+        font-size: 2rem;
+
+    }
+}
+
+.stories{
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}

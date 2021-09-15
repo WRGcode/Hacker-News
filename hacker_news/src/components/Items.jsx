@@ -7,18 +7,18 @@ const Items = () => {
     const { isLoading, hits, removeStory} = useAppContext()
 
     if (isLoading) {
-        return <div className='isloading'></div>
+        return <div className='isloading'><div className='spinner' /></div>
     }
     return (
         hits.map((item) =>{
             const { objectID, title, num_comments, url, points, author } = item
             return (
                 <article key={objectID} className='story'>
-            <h4 className='title'>{title}</h4>
-            <p className='info'>{points} points by<span> {author} |</span> {num_comments} comments</p>
+            <h4 className='article-title'>{title}</h4>
+            <p className='info'>{points} points by<span className='info'> {author}</span> | {num_comments} comments</p>
             <div>
-                <a href={url} className='read-link'>readMore</a>
-                <button onChange={removeStory} className='remove-btn'>remove</button>
+                <a href={url} target='_blank' rel='noopener noreferrer' className='read-link'>readMore</a>
+                <button className='remove-btn' onClick={() => removeStory(objectID)}>remove</button>
             </div>
 
         </article>
